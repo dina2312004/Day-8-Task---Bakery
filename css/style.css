@@ -7,7 +7,7 @@ nav{
     position: fixed;
     width: 100%;
     padding: 20px 40px;
-    background-color: aliceblue;
+    background-color: rgb(91, 95, 99);
     display: flex;
     top: 0;
     justify-content:space-between;
@@ -18,9 +18,12 @@ nav{
 .logo{
     display: flex;
     align-items: center;
-    gap: 15px;
-     width: 30px;
+    /* gap: 15px; */
+    /* width: 30px; */
     height: 30x;
+}
+.logo img{
+    width: 200px;
 }
 .nav_links{
     list-style: none;
@@ -29,7 +32,7 @@ nav{
 }
 .nav_links a{
     text-decoration: none;
-    color: #333;
+    color: #dad5d5;
     font-weight: 500px;
 }
 .head{
@@ -44,6 +47,10 @@ nav{
     text-align: center;
     padding-top: 80px;
 }
+.wel{
+    color: white;
+    font-size: 25px;
+}
 .btn{
     padding: 12px 20px;
     font-weight: bold;
@@ -51,13 +58,15 @@ nav{
 
 }
 .container{
-    margin: 0 ;
+    margin: 0 auto;
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
     max-width: 1000px;
     flex-direction: row;
     gap: 40px;
+    padding: 100px 15px;
+    justify-content: space-between;
 }
 .img img{
     width: 100%;
@@ -79,8 +88,10 @@ nav{
 .content p{
 font-size: 16px;
 margin-bottom: 20px;
-line-height: 1.5
+line-height: 1.5;
+color: #333;
 }
+
 ul{
     list-style: none;
     padding: 0;
@@ -91,4 +102,60 @@ li{
     margin-bottom: 12px;
     display: flex;
     align-items: center;
+}
+
+@media (max-width:640px)  {
+    nav{
+        flex-direction: column;
+        padding: 10px 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav_links{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .content h2{
+        font-size: 24px;
+    }
+    .content p{
+        font-size: 14px;
+    }
+    .img img{
+        width: 80%;
+        align-items: center;
+    }
+    .container{
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+}
+@media  (max-width:770px) {
+
+    .content h2{
+        font-size: 28px;
+    }
+    .content p{
+        font-size: 15px;
+    }
+    .container{
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+@media (max-width:1024px) {
+    nav{
+        padding: 15px 30px;
+    }
+
+    .content h2{
+        font-size: 28px;
+    }
+   
+    
+    .container{
+        flex-direction: column;
+        gap: 20px;
+    }
 }
